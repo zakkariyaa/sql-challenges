@@ -1,14 +1,15 @@
-const test = require("node:test");
-const assert = require("node:assert");
-const { listCohortsInFinsbo } = require("../model.js");
+const test = require('node:test');
+const assert = require('node:assert');
+const { listCohortsInFinsbo } = require('../model.js');
 
-test("can list all cohorts in Finsbury Park", () => {
+test('can list all cohorts in Finsbury Park', () => {
   const cohorts = listCohortsInFinsbo();
+  console.log(cohorts);
   const expected = [
-    { name: "14" },
-    { name: "15" },
-    { name: "16" },
-    { name: "17" },
+    { name: '14' },
+    { name: '15' },
+    { name: '16' },
+    { name: '17' },
   ];
   assert.deepEqual(cohorts, expected);
 });
